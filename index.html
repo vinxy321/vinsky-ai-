@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="title">
+
+            <h1>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                AI Image Generator
+            </h1>
+
+            <p>Create stunning AI images from your imagination.</p>
+
+        </div>
+
+        <textarea
+        id="prompt"
+        placeholder="Example: A futuristic cyberpunk city at sunset with flying cars..."></textarea>
+
+        <div class="options">
+
+            <div class="option">
+
+                <label>Image Count</label>
+
+                <select id="imageCount">
+                    <option value="1">1 Image</option>
+                    <option value="2">2 Images</option>
+                    <option value="4" selected>4 Images</option>
+                </select>
+
+            </div>
+
+            <div class="option">
+
+                <label>Aspect Ratio</label>
+
+                <select id="aspectRatio">
+                    <option value="square">Square</option>
+                    <option value="portrait">Portrait</option>
+                    <option value="landscape">Landscape</option>
+                </select>
+
+            </div>
+
+            <div class="option">
+
+                <label>Quality</label>
+
+                <select id="quality">
+                    <option value="standard">Standard</option>
+                    <option value="hd">HD</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <button id="generateBtn">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            Generate Images
+
+        </button>
+
+        <div id="gallery" class="gallery"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+<div class="preview" id="preview">
+
+    <span id="closePreview">&times;</span>
+
+    <img id="previewImg">
+
+</div>
+</body>
+</html>
